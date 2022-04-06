@@ -5,4 +5,20 @@
 - Класс должен иметь метод increment, который увеличивает counter на 1 и возвращает результат
 - Класс должен иметь метод decrement, который уменьшает counter на 1 и возвращает результат
  */
-export class Counter {}
+export class Counter {
+    counter: number;
+    start: number;
+
+    constructor(counter: number = 0, start: number = counter) {
+        this.counter = counter;
+        this.start = start;
+    }
+
+    increment(): number {
+        return this.counter++;
+    }
+
+    decrement(): number {
+        return this.counter--;
+    }
+}
